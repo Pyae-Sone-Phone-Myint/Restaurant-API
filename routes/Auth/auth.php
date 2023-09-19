@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware('auth:sanctum')->group(function () {
-
     Route::prefix('user')->controller(AuthController::class)->group(function () {
+        Route::get('roles','roles');
         Route::get('lists', 'userLists');
         Route::middleware(CheckBannedUser::class)->group(function () {
             Route::get('profile', "userProfile");

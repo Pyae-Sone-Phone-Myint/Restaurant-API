@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserDetailResource;
+use App\Models\Role;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,6 +14,15 @@ use Illuminate\Validation\Rules\Password;
 
 class AuthController extends Controller
 {
+    public function roles()
+    {
+        $roles = Role::select('id','position')->get();
+        $this->authorize("admin-only");
+        return response()->json([
+            "data" => $roles,
+        ]);
+    }
+
     public function userLists()
     {
         if (Auth::user()->role->position !== "admin") {

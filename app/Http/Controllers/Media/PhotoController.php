@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Media;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePhotoRequest;
 use App\Http\Resources\PhotoResource;
 use App\Models\Photo;

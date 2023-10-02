@@ -18,7 +18,39 @@
 #### Roles (Get)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/roles
+    http://127.0.0.1:8000/api/v1/users/roles
+```
+
+## Media
+
+### Photo
+
+#### Store Photo (Post)
+
+```https
+    http://127.0.0.1:8000/api/v1/photos
+```
+
+| Arguments | Type  | Validation   | Description |
+| :-------- | :---- | :----------- | :---------- |
+| photos[]  | array | **Required** | []          |
+
+#### Get Photo (Get)
+
+```https
+    http://127.0.0.1:8000/api/v1/photos
+```
+
+#### Show Photo (Get)
+
+```https
+    http://127.0.0.1:8000/api/v1/photos/{id}
+```
+
+#### Delete Photo (Del)
+
+```https
+    http://127.0.0.1:8000/api/v1/photos/{id}
 ```
 
 ## Profile
@@ -30,13 +62,13 @@
 -   Admin can only see user lists.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/lists
+    http://127.0.0.1:8000/api/v1/users/lists
 ```
 
 #### Your Profile (Get)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/profile
+    http://127.0.0.1:8000/api/v1/users/profile
 ```
 
 #### User Profile (Get)
@@ -44,7 +76,7 @@
 -   Admin can only check user profile.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/profile/{id}
+    http://127.0.0.1:8000/api/v1/users/profile/{id}
 ```
 
 ### Manage Profile
@@ -54,7 +86,7 @@
 -   Admin can only edit user profile.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/edit-profile/{id}
+    http://127.0.0.1:8000/api/v1/users/edit-profile/{id}
 ```
 
 | Arguments     | Type   | Validation   | Description     |
@@ -68,7 +100,7 @@
 #### Edit Your Profile (Put)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/edit-profile
+    http://127.0.0.1:8000/api/v1/users/edit-profile
 ```
 
 | Arguments     | Type   | Validation   | Description     |
@@ -84,7 +116,7 @@
 -   Admin only can create user account.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/create
+    http://127.0.0.1:8000/api/v1/users/create
 ```
 
 | Arguments             | Type    | Validation   | Description               |
@@ -105,7 +137,7 @@
 -   Admin only can ban user.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/{id}/ban
+    http://127.0.0.1:8000/api/v1/users/{id}/ban
 ```
 
 #### Un-ban User (Post)
@@ -113,7 +145,7 @@
 -   Admin only can un-ban user.
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/{id}/un-ban
+    http://127.0.0.1:8000/api/v1/users/{id}/un-ban
 ```
 
 ### Logout
@@ -121,19 +153,19 @@
 #### Logout (Post)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/logout
+    http://127.0.0.1:8000/api/v1/users/logout
 ```
 
 #### Logout All Device (Post)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/logout-all
+    http://127.0.0.1:8000/api/v1/users/logout-all
 ```
 
 #### Password Change (Post)
 
 ```https
-    http://127.0.0.1:8000/api/v1/user/change-password
+    http://127.0.0.1:8000/api/v1/users/change-password
 ```
 
 | Arguments             | Type   | Validation   | Description      |

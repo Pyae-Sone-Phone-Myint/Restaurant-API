@@ -22,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1')->middleware(AcceptJson::class)->group(function () {
 
 
-        // Include the authentication routes
-        include __DIR__ . '/Auth/auth.php';
+    // Include the authentication routes
+    include __DIR__ . '/Auth/auth.php';
+
+    // Include the photo routes
+    include __DIR__ . '/Media/photo.php';
 });
